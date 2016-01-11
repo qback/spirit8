@@ -1,0 +1,155 @@
+.about
+	padding-top 90px
+	padding-bottom 100px
+	font-family $opensans
+	offset-section()
+
+	&__wrapper
+		wrapper()
+		background-image url('../images/bg_about.png')
+		background-repeat no-repeat
+		background-origin content-box
+		background-position 0 12px
+
+		+below(1024px)
+			background-size 60%
+
+		+below(768px)
+			background-image none
+
+	&__text
+		width 36%
+		margin-left 60%
+
+		+below(1024px)
+			margin-left 46%
+			width 50%
+
+		+below(768px)
+			width 100%
+			margin-left 0
+			text-align center
+
+	&__block-name
+		color #636363
+		font-size 20px
+		font-weight 400
+		line-height (37/20)
+		text-transform uppercase
+
+		+below(1024px)
+			font-size 18px
+
+	&__title
+		color #222
+		font-size 34px
+		line-height (37/34)
+		text-transform uppercase
+		font-weight 400
+		letter-spacing -1px
+		margin-bottom 26px
+		position relative
+		padding-bottom 20px
+
+		+below(1024px)
+			font-size 31px
+
+		&::after
+			position absolute
+			content ''
+			width 98px
+			height 4px
+			bottom 0
+			left 0
+			background-color #fcac45
+
+			+below(768px)
+				width 60%
+				left 20%
+
+		& span
+			font-weight 700
+			white-space no-wrap
+
+			+below(1110px)
+				display block
+
+			+below(768px)
+				display inline
+
+	&__desc
+		color #6c6c6c
+		font-size 18px
+		font-weight 400
+		line-height (25/18)
+		margin-bottom 39px
+		letter-spacing -.85px
+
+		+below(1024px)
+			font-size 16px
+			margin-bottom 30px
+
+	&__props
+		margin-bottom 48px
+
+		+below(1024px)
+			margin-bottom 30px
+			margin-x auto
+
+	&__prop
+		color #5a5a5a
+		line-height (25/18)
+		font-size 18px
+		font-weight 600
+		margin-bottom 8px
+
+		+below(1024px)
+			font-size 16px
+
+		& span
+			font-size 16px
+			font-style italic
+			letter-spacing -.5px
+
+			+below(1024px)
+				font-size 14px
+
+	&__prop-icon
+		fill #5a5a5a
+		svgSize($list-circle)
+		margin-right 8px
+
+	&__button
+		width 194px
+		height 47px
+		border 1px solid rgba(0, 0, 0, .5px)
+		display inline-block
+		line-height (45 / 12)
+		color #616161
+		font-size 12px
+		font-weight 600
+		letter-spacing .3px
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		border-radius 3px
+		margin-left -2px
+		transition all .3s
+
+		&:hover
+		&:active
+			opacity .7
+
+			& .about__button-icon
+				opacity 1
+				fill #fcac45
+				transform scale(1.2)
+
+	&__button-icon
+		svgSize($briefcase)
+		fill #616161
+		margin-right 5px
+		position relative
+		left -5px
+		top 1px
+

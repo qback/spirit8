@@ -1,0 +1,22 @@
+
+
+mixin clients(clients)
+	+b('section').clients&attributes(attributes)
+		.clients__wrapper
+			h2.clients__title Some of #[span our clients]
+			.clients__container
+				.clients__container-wrapper
+					each client in clients
+						.clients__item
+							img.clients__item-img(
+								src='assets/images/#{client[0]}'
+								alt='#{client[1]}'
+								)
+					//в качестве примера
+					each client in clients
+						.clients__item
+							img.clients__item-img(
+								src='assets/images/#{client[0]}'
+								alt='#{client[1]}'
+							)
+				.clients__container-pagination

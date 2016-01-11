@@ -1,0 +1,15 @@
+include ../figure/figure
+
+mixin masonry(portfolioItems)
+	+b.masonry&attributes(attributes)
+		header.masonry__header
+			.masonry__hint Filter by type
+			ul.masonry__filter
+				li.masonry__filter-item(data-filter='*').masonry__filter-item_active All
+				li.masonry__filter-item(data-filter='.figure_web') Web design
+				li.masonry__filter-item(data-filter='.figure_mob') Mobile design
+				li.masonry__filter-item(data-filter='.figure_photo') Photography
+		.masonry__container
+			each portfolioItem in portfolioItems
+				+figure(portfolioItem)(class='#{portfolioItem.class} grid-sizer')
+

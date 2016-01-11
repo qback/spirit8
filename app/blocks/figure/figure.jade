@@ -1,0 +1,13 @@
+include ../icon/icon
+
+mixin figure(portfolioItem)
+	+b('figure').figure&attributes(attributes)
+		.figure__wrapper
+			img.figure__img(src='assets/images/#{portfolioItem.src}' alt='#{portfolioItem.alt}')
+			figcaption.figure__caption
+				p.figure__title #{portfolioItem.title}
+				p.figure__desc #{portfolioItem.desc}
+				a.figure__link(href='#')
+					+icon('plus')(class='figure__link-icon')
+
+

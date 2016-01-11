@@ -1,0 +1,87 @@
+[
+	{
+		"class": "figure_web",
+		"alt": "img_web-design-item",
+		"src":"img_web-design-item.jpg",
+		"title":"Trend and fashion",
+		"desc": "Website design"
+	},
+	{
+		"class": "figure_web",
+		"alt": "img_web-design-item",
+		"src":"img_web-design-item.jpg",
+		"title":"Trend and fashion",
+		"desc": "Website design"
+	},
+	{
+		"class": "figure_web",
+		"alt": "img_web-design-item",
+		"src":"img_web-design-item.jpg",
+		"title":"Trend and fashion",
+		"desc": "Website design"
+	},
+	{
+		"class": "figure_web",
+		"alt": "img_web-design-item",
+		"src":"img_web-design-item.jpg",
+		"title":"Trend and fashion",
+		"desc": "Website design"
+	},
+	{
+		"class": "figure_photo",
+		"alt": "img_photography-item",
+		"src":"img_photography-item.jpg",
+		"title":"Fashion and trend",
+		"desc": "Photo art"
+	},
+	{
+		"class": "figure_photo",
+		"alt": "img_photography-item",
+		"src":"img_photography-item.jpg",
+		"title":"Fashion and trend",
+		"desc": "Photo art"
+	},
+	{
+		"class": "figure_photo",
+		"alt": "img_photography-item",
+		"src":"img_photography-item.jpg",
+		"title":"Fashion and trend",
+		"desc": "Photo art"
+	},
+	{
+		"class": "figure_photo",
+		"alt": "img_photography-item",
+		"src":"img_photography-item.jpg",
+		"title":"Fashion and trend",
+		"desc": "Photo art"
+	},
+	{
+		"class": "figure_mob",
+		"alt": "img_mobile-design-item",
+		"src":"img_mobile-design-item.jpg",
+		"title":"Not fashion not trend",
+		"desc": "Mobile design"
+	},
+	{
+		"class": "figure_mob",
+		"alt": "img_mobile-design-item",
+		"src":"img_mobile-design-item.jpg",
+		"title":"Not fashion not trend",
+		"desc": "Mobile design"
+	},
+	{
+		"class": "figure_mob",
+		"alt": "img_mobile-design-item",
+		"src":"img_mobile-design-item.jpg",
+		"title":"Not fashion not trend",
+		"desc": "Mobile design"
+	},
+	{
+		"class": "figure_mob",
+		"alt": "img_mobile-design-item",
+		"src":"img_mobile-design-item.jpg",
+		"title":"Not fashion not trend",
+		"desc": "Mobile design"
+	}
+
+]

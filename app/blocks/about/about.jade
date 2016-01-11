@@ -1,0 +1,25 @@
+include ../icon/icon
+
+mixin about()
+	+b('section').about#about&attributes(attributes)
+		.about__wrapper
+			.about__text
+				small.about__block-name About us
+				h3.about__title Some words #[span about us]
+				p.about__desc
+					| We love building and rebuilding brands through our  specific
+					| skills. Using colour, fonts, and illustration, we brand companies in
+					| a way they will never forget.
+				ul.about__props
+					li.about__prop
+						+icon('list-circle')(class='about__prop-icon')
+						| Mission - #[span We deliver uniqueness and quality]
+					li.about__prop
+						+icon('list-circle')(class='about__prop-icon')
+						| Skills -  #[span Delivering fast and excellent results]
+					li.about__prop
+						+icon('list-circle')(class='about__prop-icon')
+						| Clients - #[span Satisfied clients thanks to our experience]
+				a.about__button(href='#portfolio' title='Go to portfolio' data-scroll='portfolio')
+					+icon('briefcase')(class='about__button-icon')
+					| Browse our work

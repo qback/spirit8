@@ -1,0 +1,33 @@
+include ../icon/icon
+
+mixin services()
+	+b('section').services&attributes(attributes)
+		.services__wrapper
+			h2.services__title Take a look at #[span our services]
+			p.services__subtitle
+				| Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+			ul.services__feature-list
+				li.services__feature
+					figure.services__feature-figure
+						+icon('screen')(class='services__feature-icon services__feature-icon_screen')
+					h4.services__feature-title Web Design
+					p.services__feature-text
+						| The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+				li.services__feature
+					figure.services__feature-figure
+						+icon('smartphone')(class='services__feature-icon services__feature-icon_smartphone')
+					h4.services__feature-title Mobile apps
+					p.services__feature-text
+						| The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+				li.services__feature
+					figure.services__feature-figure
+						+icon('camera')(class='services__feature-icon services__feature-icon_camera')
+					h4.services__feature-title Photography
+					p.services__feature-text
+						| The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+				li.services__feature
+					figure.services__feature-figure
+						+icon('megaphone')(class='services__feature-icon services__feature-icon_megaphone')
+					h4.services__feature-title Marketing
+					p.services__feature-text
+						| The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.

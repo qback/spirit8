@@ -1,0 +1,18 @@
+include ../icon/icon
+include ../nav/nav
+
+
+mixin header()
+	+b('header').header&attributes(attributes)
+		+nav
+		.header__wrapper
+			.header__intro-text
+				h1.header__title Welcome on #[span spirit8]
+				p.header__subhead
+					| We are a digital agency with #[span years of experience] and with #[span extraordinary people]
+		span.header__arrow
+			+icon('arrow')(class='header__arrow-icon')
+
+
+
+

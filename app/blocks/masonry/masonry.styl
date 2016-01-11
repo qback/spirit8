@@ -1,0 +1,63 @@
+.masonry
+	font-family $opensans
+
+	&__container
+		 margin 0 auto
+
+	&__header
+		margin-bottom 45px
+
+		+below(1024px)
+			margin-bottom 35px
+
+		+below(768px)
+			margin-bottom 25px
+
+	&__hint
+		display inline-block
+		color #222
+		font-size 18px
+		font-weight 600
+		line-height (24/18)
+		text-transform uppercase
+
+		+below(768px)
+			display block
+			text-align center
+			margin-bottom 10px
+
+	&__filter
+		float right
+
+		+below(768px)
+			float none
+			display block
+			text-align center
+			margin-bottom 10px
+
+	&__filter-item
+		display inline-block
+		border-right 2px solid #6c6c6c
+		font-size 18px
+		line-height (20/18)
+		font-weight 400
+		padding-x 11px
+		color #6c6c6c
+		cursor pointer
+
+		+below(768px)
+			font-size 16px
+			padding-x 6px
+
+		&:last-child
+			border-right none
+			padding-right 0
+
+		&_active
+			font-weight 600
+			color #222
+
+
+
+
+

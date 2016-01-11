@@ -1,0 +1,19 @@
+include ../logo/logo
+
+mixin nav()
+	+b('nav').nav&attributes(attributes)
+		.nav__wrapper
+			.nav__logo
+				+logo()
+			a#show-hide-menu.nav__show-hide-menu(href='javascript:void(0);')
+				+icon('menu')(class='nav__show-menu-icon')
+
+			ul.nav__menu
+				li.nav__item: a.nav__link(href='#header' data-scroll='header') Home
+				li.nav__item: a.nav__link(href='#about' data-scroll='about') About
+				li.nav__item: a.nav__link(href='#services' data-scroll='services') Services
+				li.nav__item: a.nav__link(href='#portfolio' data-scroll='portfolio') Portfolio
+				li.nav__item: a.nav__link(href='#testimonials' data-scroll='testimonials') Testimonials
+				li.nav__item: a.nav__link(href='#contact' data-scroll='contact') Contact
+
+

@@ -1,0 +1,18 @@
+include ../about/about
+include ../team/team
+include ../services/services
+include ../clients/clients
+include ../work/work
+include ../testimonial/testimonial
+include ../contact/contact
+
+mixin index()
+	+b('main').index
+		//- +header(id='header' data-anchor='header')
+		+about(id='about' data-anchor='about')
+		+team(getData('members.json'))
+		+services(id='services' data-anchor='services')
+		+clients(getData('clients.json'))
+		+work(id='portfolio' data-anchor='portfolio')
+		+testimonial(getData('testimonials.json'))(id='testimonials' data-anchor='testimonials')
+		+contact(id='contact' data-anchor='contact')

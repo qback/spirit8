@@ -1,0 +1,97 @@
+.form
+	width 100%
+	font-family $opensans
+	text-align right
+
+	&__row
+		margin-bottom 25px
+
+		+below(768px)
+			margin-bottom 10px
+
+		&:last-of-type
+			margin-bottom 33px
+
+	&__column
+		display inline-block
+		vertical-align top
+
+		&_size_full
+			width 100%
+
+			+below(768px)
+				display block
+				width 80%
+				margin 0 auto
+
+		&_size_half
+			width prc(360/750)
+			margin-right prc(25/750)
+
+			+below(768px)
+				display block
+				width 80%
+				margin-x auto
+				margin-bottom 10px
+
+			&:nth-child(2n)
+				margin-right 0
+
+				+below(768px)
+					margin 0 auto
+
+	&__label
+		display block
+		text-align left
+		font-size 14px
+		font-weight 400
+		line-height (24/14)
+		color #636363
+		margin-bottom 4px
+
+		& span
+			color #db0000
+
+	&__input
+	&__textarea
+		border 1px solid rgba(0, 0, 0, 0.4)
+		display block
+		padding 10px
+		width 100%
+		color #6c6c6c
+
+		&:focus
+			box-shadow inset 0 0 2px #fcac45
+
+	&__input
+		height 40px
+
+	&__textarea
+		height 163px
+
+	&__submit
+		display inline-block
+		width 165px
+		height 40px
+		background-color #fcac45
+		text-align center
+		border none
+		color #fff
+		font-size 16px
+		font-weight 600
+		line-height (40/16)
+		text-transform uppercase
+		position relative
+
+		+below(768px)
+			display block
+			margin 0 auto
+
+
+		&:hover
+		&:active
+			outline 1px solid #fff
+			outline-offset -2px
+
+		&:active
+			top 1px

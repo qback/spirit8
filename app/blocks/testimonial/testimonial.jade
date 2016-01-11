@@ -1,0 +1,14 @@
+
+
+mixin testimonial(testimonials)
+	+b('section').testimonial&attributes(attributes)
+		.testimonial__wrapper
+			h2.testimonial__title <span>Our clients’</span> testimonials
+			.testimonial__container
+				.testimonial__container-wrapper
+					each testimonial in testimonials
+						.testimonial__item
+							blockquote.testimonial__quote
+								| #{testimonial.quote}
+							p.testimonial__quote-autor <span> #{testimonial.quoteAutor}</span>, #{testimonial.autorInfo}
+				.testimonial__container-pagination

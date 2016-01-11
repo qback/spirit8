@@ -1,0 +1,113 @@
+.header
+	width 100%
+	height 100vh
+	position relative
+	background url('../images/bg_hero.jpg') no-repeat center center
+	background-size cover
+	min-height 790px
+	position relative
+	min-width 400px
+
+	+below(1280px)
+		height auto
+
+	+below(1024px)
+		min-height 550px
+
+	+below(768px)
+		min-height 500px
+		padding-top 200px
+
+	&__wrapper
+		wrapper()
+
+	&__intro-text
+		font-family $opensans
+		text-align center
+		position absolute
+		top 50%
+		left 50%
+		transform: translate(-50%, -50%)
+
+		+below(768px)
+			position static
+			transform none
+
+
+
+	&__title
+		font-size 44px
+		line-height (44/44)
+		font-weight 300
+		text-transform uppercase
+		color #999
+		letter-spacing -2px
+
+		+below(850px)
+			font-size 40px
+
+		+below(600px)
+			font-size 36px
+
+		& span
+			color #fcac45
+			font-weight 700
+
+	&__subhead
+		font-size 20px
+		line-height (24/20)
+		font-family $opensans
+		font-weight 400
+		color rgba(255, 255, 255, 0.75)
+		letter-spacing -1px
+		margin-top 5px
+
+		+below(850px)
+			font-size 17px
+
+		+below(600px)
+			font-size 15px
+
+		& span
+			font-weight 700
+
+
+	&__arrow
+		position absolute
+		size 50px
+		border-radius 50%
+		border: 2px solid #c3c3c3
+		bottom 90px
+		left 50%
+		transform translateX(-50%)
+
+		+below(850px)
+			size 45px
+
+		+below(850px)
+			size 40px
+
+		&::before
+			position relative
+			width 100%
+			height 100%
+
+	&__arrow-icon
+		svgSize $arrow
+		fill #c3c3c3
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		animation animation-arrow 2s infinite
+
+@keyframes animation-arrow
+	0%, 100%
+		transform translate(-50%, 0%)
+	50%
+		transform translate(-50%, -30%)
+	60%
+		transform translate(-50%, 40%)
+
+
+

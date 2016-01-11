@@ -1,0 +1,16 @@
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../page/page
+include ../header/header
+include ../footer/footer
+include ../scripts/scripts
+
+
+doctype html
+html(lang='eng')
+	include ../head/head
+	+page
+		+header(id='header' data-anchor='header')
+		block content
+		+footer
+		script window.jQuery || document.write('<script src="assets/scripts/jquery.min.js"><\/script>')
+		+scripts(['isotope.pkgd.min.js','app.min.js'])

@@ -1,0 +1,8 @@
+
+
+mixin member(member)
+	+b('article').member&attributes(attributes)
+		img.member__img(src='assets/images/#{member[0]}' alt='#{member[1]}')
+		h4.member__name #{member[1]}
+		p.member__spec #{member[2]}
+		p.member__desc #{member[3]}

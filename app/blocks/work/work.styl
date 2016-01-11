@@ -1,0 +1,46 @@
+.work
+	font-family $opensans
+	padding-top 92px
+	padding-bottom 70px
+	offset-section()
+
+	&__wrapper
+		wrapper()
+
+	&__title
+		color #222
+		font-size 44px
+		line-height (44/44)
+		text-transform uppercase
+		font-weight 300
+		text-align center
+		position relative
+		decor()
+		margin-bottom 52px
+
+		+below(1024px)
+			font-size 40px
+			margin-bottom 60px
+
+		+below(768px)
+			font-size 36px
+			margin-bottom 50px
+
+		& span
+			font-weight 600
+
+	&__subtitle
+		color #6c6c6c
+		font-size 16px
+		font-style italic
+		line-height (24/16)
+		text-align center
+		margin-bottom 105px
+
+		+below(1024px)
+			font-size 15px
+			margin-bottom 60px
+
+		+below(768px)
+			font-size 14px
+			margin-bottom 40px

@@ -1,0 +1,33 @@
+.footer
+	font-family $opensans
+	background-color #222
+	padding-top 21px
+	padding-bottom 10px
+
+	&__wrapper
+		wrapper()
+		clearfix()
+
+	&__social
+		float right
+
+		+below(768px)
+			display block
+			float none
+			text-align center
+
+	&__info
+		display inline-block
+		color #b2b2b2
+		font-size 12px
+		line-height (54/12)
+		font-weight 400
+		text-transform uppercase
+		letter-spacing .5px
+
+		+below(768px)
+			display block
+			text-align center
+
+		& span
+			font-weight 700

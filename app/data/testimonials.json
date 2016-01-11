@@ -1,0 +1,13 @@
+[
+	{
+		"quoteAutor": "Dean Martin",
+		"autorInfo": "CEO Acme Inc",
+		"quote":"The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+	},
+	{
+		"quoteAutor": "Sean Martin",
+		"autorInfo": "NASA Inc",
+		"quote":"This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+	}
+
+]

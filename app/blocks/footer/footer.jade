@@ -1,0 +1,9 @@
+include ../social/social
+
+mixin footer()
+	+b('footer').footer&attributes(attributes)
+		.footer__wrapper
+			.footer__social
+				+social
+			p.footer__info All rights reserve. Copyright &copy; 2014 #[span spirit8]
+

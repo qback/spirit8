@@ -1,0 +1,64 @@
+.testimonial
+	background-color #0b0b0b
+	font-family $opensans
+	padding-top 93px
+	padding-bottom 97px
+	offset-section()
+
+	&__wrapper
+		wrapper(975px)
+
+	&__title
+		color #fff
+		font-size 44px
+		line-height (44/44)
+		text-transform uppercase
+		font-weight 300
+		text-align center
+		margin-bottom 112px
+		position relative
+		decor()
+
+		+below(1024px)
+			font-size 40px
+			margin-bottom 90px
+
+		+below(768px)
+			font-size 36px
+			margin-bottom 80px
+
+		& span
+			font-weight 600
+
+	&__quote
+		color #e7e7e7
+		font-size 18px
+		font-weight 600
+		line-height (24/18)
+		text-transform uppercase
+		text-align center
+		margin-bottom 40px
+
+		+below(768px)
+			font-size 16px
+			margin-bottom 30px
+
+	&__quote-autor
+		color #b2b2b2
+		font-size 18px
+		line-height 24px
+		font-weight 300
+		text-align center
+		margin-bottom -5px
+
+		+below(768px)
+			font-size 16px
+			margin-bottom -15px
+
+		& span
+			font-weight 600
+
+slider-usage('.testimonial')
+
+
+

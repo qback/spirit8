@@ -1,0 +1,129 @@
+// Clear the float on any element.
+
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-left $margin
+	margin-right $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-left $padding
+	padding-right $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+rem()
+	remified = ()
+	for arg in arguments
+		push(remified, unit(arg/16, 'rem'))
+	return remified
+
+wrapper($width=1170px)
+	max-width $width
+	padding 0 15px
+	margin 0 auto
+	min-width 400px
+	+below (500px)
+		paddin 0 20px
+
+prc($decimal)
+	( $decimal * 100 ) %
+
+decor()
+	padding-bottom 30px
+
+	&::before
+		position absolute
+		content ''
+		width 98px
+		height 4px
+		bottom 0
+		left 50%
+		transform: translateX(-50%)
+		background-color #fcac45
+
+	&::after
+		content ''
+		position absolute
+		width 66px
+		height 4px
+		bottom -15px
+		left 50%
+		transform: translateX(-50%)
+		background-color rgba(252, 172, 69, 0.7)
+
+slider-usage($block-name, $padding-bottom=78px)
+	{$block-name}__container
+		margin 0 auto
+		position relative
+		overflow hidden
+		z-index 1
+		padding-bottom $padding-bottom
+
+	{$block-name}__container-wrapper
+		position relative
+		width 100%
+		height 100%
+		z-index 1
+		display flex
+		transition-property transform
+		box-sizing content-box
+
+
+	{$block-name}__container-pagination
+		position absolute
+		bottom 0
+		left -2px
+		width 100%
+		text-align center
+		transition 300ms
+		transform translate3d(0, 0, 0)
+		z-index 10
+
+	{$block-name}__pagination-bullet
+			margin 0 7px
+			cursor pointer
+			width 9px
+			height 9px
+			display inline-block
+			background #fff
+
+	{$block-name}__pagination-bullet_active
+			background #fcac45
+
+	{$block-name}__item
+		flex-shrink 0
+		width 100%
+		height 100%
+		position relative
+
+offset-section()
+	+below(1024px)
+		padding-top 90px
+		padding-bottom 80px
+	+below(768px)
+		padding-top 70px
+		padding-bottom 60px

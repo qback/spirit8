@@ -1,0 +1,158 @@
+.nav
+	min-height 95px
+	padding-top 52px
+	background transparent
+	z-index 100
+	transition all .2s
+	clearfix()
+
+	+below(768px)
+		background-image linear-gradient(to bottom, #fcac45 30px, #070707 30px)
+		position fixed
+		top 0
+		width 100%
+		z-index 10
+
+
+	&_fixed
+		width: 100%
+		padding-top 20px
+		background #070707
+		position fixed
+		min-height 80px
+
+		+below(768px)
+			min-height 60px
+
+	&__wrapper
+		wrapper()
+
+	&__logo
+		float left
+
+		+below(1280px)
+			margin-left 40px
+
+	&__menu
+		margin 0
+		padding 0
+		list-style none
+		float right
+		margin-right -8px
+		transition height .3s ease
+
+		+below(1280px)
+			margin-right 20px
+
+		+below(768px)
+			height 0
+			overflow hidden
+			float none
+			margin-right 0
+			width 100%
+
+		&_open
+			height 300px
+
+	&__item
+		display inline-block
+		padding 0 8px
+		margin-left 6px
+		position relative
+		line-height (24/14)
+
+		+below(768px)
+			display block
+			padding 10px 0
+			text-align center
+			margin-left 0
+
+	&__link
+		display inline-block
+		color #fff
+		text-decoration none
+		font-family $lato
+		font-size 14px
+		line-height (14/14)
+		text-transform uppercase
+		text-align center
+		transition all .2s
+
+		&::after,
+		&::before
+			transition height .00002s, background-color .2s, left .2s
+			content ''
+			position absolute
+			width 50%
+			height 0
+			top 39px
+			background-color transparent
+
+			+below(768px)
+				display none
+
+		&::before
+			left 40%
+
+		&::after
+			left -10%
+
+		&:hover
+			text-shadow 0 0 15px #fcac45
+
+			&::before,
+			&::after
+				height 3px
+
+			&::before
+				background-color #292929
+				left 50%
+
+			&::after
+				background-color #fcac45
+				left 0
+
+		&_active
+			cursor default
+			text-shadow 0 0 15px #fcac45
+
+			&::after
+			&::before
+				height 3px
+
+			&::before
+				background-color #292929
+				left 50%
+
+			&::after
+				background-color #fcac45
+				left 0
+
+	&__show-hide-menu
+		display: none
+		color #fff
+		text-decoration: none
+		float right
+		width 24px
+		height 24px
+		border-radius 50%
+		transition transform .2s
+		margin-right 40px
+
+		+below(768px)
+			display block
+
+		&_active
+			transform rotate(90deg)
+
+			& .nav__show-menu-icon
+				fill #fcac45
+
+	&__show-menu-icon
+		width 100%
+		height 100%
+		fill white
+		transition color .2s
+
+
+

@@ -1,0 +1,37 @@
+.team
+	background-color #070707
+	font-family $opensans
+	color #fff
+	padding-top 93px
+	padding-bottom 82px
+	offset-section()
+
+	&__wrapper
+		wrapper()
+
+	&__title
+		font-size 44px
+		line-height (44/44)
+		text-transform uppercase
+		font-weight 300
+		text-align center
+		margin-bottom 107px
+		position relative
+		decor()
+
+		+below(1024px)
+			font-size 40px
+			margin-bottom 90px
+
+		+below(768px)
+			font-size 36px
+			margin-bottom 80px
+
+
+		& span
+			font-weight 600
+
+slider-usage('.team')
+
+
+

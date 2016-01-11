@@ -1,0 +1,13 @@
+include ../member/member
+
+mixin team(members)
+	+b('section').team&attributes(attributes)
+		.team__wrapper
+			h2.team__title Meet #[span our team]
+			.team__container
+				.team__container-wrapper
+					each member in members
+						.team__item
+							+member(member)
+				.team__container-pagination
+

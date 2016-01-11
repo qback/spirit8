@@ -1,0 +1,16 @@
+
+
+mixin form()
+	+b.form&attributes(attributes)(action='#' method='post')
+		.form__row
+			.form__column.form__column_size_half
+				label.form__label(for='input-name') Name #[span *]
+				input.form__input(id='input-name' type='text' name='input-text' required)
+			.form__column.form__column_size_half
+				label.form__label(for='input-email') Email address #[span *]
+				input.form__input(id='input-email' type='email' name='input-email' required)
+		.form__row
+			.form.column.form__column_size_full
+				label.form__label(for='textarea') Message #[span *]
+				textarea.form__textarea(id='textarea' name='textarea' required)
+		input.form__submit(type='submit' value='Send')

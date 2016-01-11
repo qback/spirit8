@@ -1,0 +1,14 @@
+include ../icon/icon
+
+mixin social()
+	+b.social&attributes(attributes)
+		a.social__link(href="#")
+			+icon('facebook')(class='social__link-icon social__link-icon_facebook')
+		a.social__link(href="#")
+			+icon('twitter')(class='social__link-icon social__link-icon_twitter')
+		a.social__link(href="#")
+			+icon('google')(class='social__link-icon social__link-icon_google')
+		a.social__link(href="#")
+			+icon('linkedin')(class='social__link-icon social__link-icon_linkedin')
+		a.social__link(href="#")
+			+icon('dribbble')(class='social__link-icon social__link-icon_dribble')

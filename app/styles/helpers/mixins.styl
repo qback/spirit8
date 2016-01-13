@@ -45,9 +45,11 @@ wrapper($width=1170px)
 	max-width $width
 	padding 0 15px
 	margin 0 auto
-	min-width 400px
+	// min-width 400px
 	+below (500px)
-		paddin 0 20px
+		padding 0 20px
+	+below (400px)
+		padding 0 10px
 
 prc($decimal)
 	( $decimal * 100 ) %

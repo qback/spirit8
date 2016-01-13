@@ -1,5 +1,6 @@
 mixin scripts(scripts)
 	each src in scripts
 		- var isExternalScript = /^(?:https?\:)?\/\//i;
+		//- // - src = isExternalScript.test(src) ? src : '/assets/scripts/' + src;
 		- src = isExternalScript.test(src) ? src : '../dist/assets/scripts/' + src;
 		script(src=src)

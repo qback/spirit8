@@ -2,51 +2,60 @@ import svg4everybody from 'svg4everybody';
 import 'swiper';
 
 
-$(() => {
 
-	//svg в ie
+$(() => {
+	var lastId,
+		topMenu = $('#top-menu'),
+		topMenuHeight = topMenu.outerHeight() + 15,
+		menuItems = $('.nav__link');
+	var scrollItems = menuItems.map(function () {
+		var item = $($(this).attr('href'));
+		if (item.length) {
+			return item;
+		}
+	});
+
+	// svg в ie
 	svg4everybody();
 
-	//вызов меню по кнопке для ширины < 768px
-	$(function(){
-		var nav = $('.nav__menu'),
-			navLink = $('#show-hide-menu');
-		navLink.click(function () {
-			$(this).toggleClass('nav__show-hide-menu_active');
-			nav.toggleClass('nav__menu_open');
-		});
+	// вызов меню по кнопке для ширины < 768px
+	var nav = $('.nav__menu'),
+		navLink = $('#show-hide-menu');
+	navLink.click(function () {
+		$(this).toggleClass('nav__show-hide-menu_active');
+		nav.toggleClass('nav__menu_open');
 	});
 
-	// плавная анимация при скроллинге к секциям
-	$('.nav__link, .about__button').on('click', function () {
-		var scrollAnchor = $(this).attr('data-scroll'),
-			scrollPoint = $('[data-anchor="' + scrollAnchor + '"]').offset().top;
-		$('body,html').animate({
-			scrollTop: scrollPoint
-		}, 500);
-		return false;
+	// плавная навигация к якорям
+	menuItems.click(function (e) {
+		var href = $(this).attr('href'),
+		offsetTop = href === '#' ? 0 : $(href).offset().top - topMenuHeight + 1;
+		$('html, body').stop().animate({
+			scrollTop: offsetTop
+		}, 300);
+		e.preventDefault();
 	});
 
-	// переключение классов у ссылок навигации при скроллинге
+	// изменение классов у навигации и элементв навигации при скролле
 	$(window).scroll(function () {
-		var windscroll = $(window).scrollTop();
-		if (windscroll >= 95) {
-			var $anchors = $('[data-anchor]');
-			$('.nav').addClass('nav_fixed');
-			$anchors.each(function (i) {
-				var $this = $(this);
-				// для блока contact специальное условие из-за маленького футера
-				if ((($this.data('anchor') === 'contact') && ($this.position().top <= windscroll + 100)) || ($this.position().top <= windscroll + 80)) {
-					$('.nav__link').removeClass('nav__link_active');
-					$('.nav__link').eq(i).addClass('nav__link_active');
-				}
-			});
+		var fromTop = $(this).scrollTop() + topMenuHeight;
+		if (fromTop >= 120) {
+			topMenu.addClass('nav_fixed');
 		} else {
-			$('.nav').removeClass('nav_fixed');
-			$('.nav__link').removeClass('nav__link_active');
-			$('.nav__link:first').addClass('nav__link_active');
+			topMenu.removeClass('nav_fixed');
 		}
-	}).scroll();
+		var cur = scrollItems.map(function () {
+			if ($(this).offset().top < fromTop)
+				return this;
+			});
+		cur = cur[cur.length - 1];
+		var id = cur && cur.length ? cur[0].id : '';
+		if (lastId !== id) {
+			lastId = id;
+			var filter = '[href="#' + id + '"]';
+			menuItems.removeClass('nav__link_active').filter(filter).addClass('nav__link_active');
+		}
+	});
 
 
 	// подключение слайдера для блока team
@@ -87,6 +96,10 @@ $(() => {
 		bulletClass: 'clients__pagination-bullet',
 		bulletActiveClass: 'clients__pagination-bullet_active',
 		breakpoints: {
+			400: {
+				slidesPerView: 1,
+				slidesPerGroup: 1
+			},
 			600: {
 				slidesPerView: 2,
 				slidesPerGroup: 2
@@ -143,6 +156,12 @@ $(() => {
 			}
 		});
 		return false;
+	});
+
+	//скрыть плитку с портфолио по нажатию кнопки
+	$('.work__button').click(function () {
+		$('.masonry').toggleClass('masonry_hidden');
+		$(this).text($(this).text() === 'Hide Portfolio' ? 'Show Portfolio' : 'Hide Portfolio');
 	});
 
 });

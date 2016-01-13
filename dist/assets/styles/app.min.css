@@ -187,14 +187,16 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
   background-image: url("../images/bg_about.png");
   background-repeat: no-repeat;
   background-origin: content-box;
   background-position: 0 12px;
 }
 .about__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.about__wrapper +below (400px) {
+  padding: 0 10px;
 }
 @media only screen and (max-width: 1024px) {
   .about__wrapper {
@@ -391,10 +393,12 @@ table {
   max-width: 975px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .clients__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.clients__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .clients__title {
   color: #fff;
@@ -518,10 +522,12 @@ table {
   max-width: 780px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .contact__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.contact__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .contact__title {
   color: #222;
@@ -601,9 +607,20 @@ table {
     height: 136px;
   }
 }
+@media only screen and (max-width: 400px) {
+  .grid-sizer {
+    width: 262px;
+    height: 237px;
+  }
+}
 .figure {
   margin-bottom: 30px;
   overflow: hidden;
+}
+@media only screen and (max-width: 400px) {
+  .figure {
+    margin-bottom: 5px;
+  }
 }
 .figure__wrapper {
   position: relative;
@@ -629,7 +646,7 @@ table {
   padding-left: 5px;
   padding-right: 5px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__caption {
     padding-top: 32px;
   }
@@ -642,7 +659,7 @@ table {
   text-transform: uppercase;
   margin-bottom: 7px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__title {
     font-size: 12px;
     margin-bottom: 5px;
@@ -653,7 +670,7 @@ table {
   font-size: 14px;
   margin-bottom: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__desc {
     font-size: 10px;
     margin-bottom: 10px;
@@ -670,13 +687,13 @@ table {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__link:hover {
     -webkit-transform: none;
             transform: none;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__link {
     width: 30px;
     height: 30px;
@@ -693,7 +710,7 @@ table {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .figure__link-icon:hover {
     -webkit-transform: none;
             transform: none;
@@ -712,10 +729,12 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .footer__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.footer__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .footer__wrapper:after {
   display: table;
@@ -867,7 +886,6 @@ table {
   background-size: cover;
   min-height: 790px;
   position: relative;
-  min-width: 400px;
 }
 @media only screen and (max-width: 1280px) {
   .header {
@@ -889,10 +907,12 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .header__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.header__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .header__intro-text {
   font-family: 'Open Sans', sans-serif;
@@ -1034,6 +1054,10 @@ table {
 .masonry {
   font-family: 'Open Sans', sans-serif;
 }
+.masonry_hidden {
+  height: 0;
+  display: none;
+}
 .masonry__container {
   margin: 0 auto;
 }
@@ -1152,21 +1176,18 @@ table {
   padding-top: 20px;
   background: #070707;
   position: fixed;
-  min-height: 80px;
-}
-@media only screen and (max-width: 768px) {
-  .nav_fixed {
-    min-height: 60px;
-  }
+  min-height: 59px;
 }
 .nav__wrapper {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .nav__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.nav__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .nav__logo {
   float: left;
@@ -1310,10 +1331,8 @@ table {
   fill: #fff;
   transition: color 0.2s;
 }
-.wrapper {
-  width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
+.page {
+  min-width: 320px;
 }
 .services {
   font-family: 'Open Sans', sans-serif;
@@ -1336,10 +1355,12 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .services__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.services__wrapper +below (400px) {
+  padding: 0 10px;
 }
 @media only screen and (max-width: 1024px) {
   .services__wrapper {
@@ -1601,10 +1622,12 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .team__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.team__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .team__title {
   font-size: 44px;
@@ -1724,10 +1747,12 @@ table {
   max-width: 975px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .testimonial__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.testimonial__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .testimonial__title {
   color: #fff;
@@ -1879,10 +1904,12 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 400px;
 }
 .work__wrapper +below (500px) {
-  paddin: 0 20px;
+  padding: 0 20px;
+}
+.work__wrapper +below (400px) {
+  padding: 0 10px;
 }
 .work__title {
   color: #222;
@@ -1950,5 +1977,34 @@ table {
   .work__subtitle {
     font-size: 14px;
     margin-bottom: 40px;
+  }
+}
+.work__button {
+  display: none;
+  width: 150px;
+  height: 40px;
+  border: 1px solid rgba(0,0,0,0.5);
+  line-height: 3.333333333333333;
+  color: #616161;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  transition: all 0.3s;
+  background-color: transparent;
+  margin: 0 auto;
+  position: relative;
+  top: -10px;
+}
+.work__button:hover,
+.work__button:active {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 400px) {
+  .work__button {
+    display: block;
   }
 }

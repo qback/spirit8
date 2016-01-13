@@ -89,8 +89,8 @@
   },
   "dependencies": {
     "imports-loader": "^0.6.5",
-    "isotope": "^0.6.5",
     "isotope-layout": "^2.2.2",
+    "scrollspy-js": "^0.1.2",
     "swiper": "^3.2.7"
   }
 }

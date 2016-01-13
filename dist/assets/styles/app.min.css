@@ -192,12 +192,6 @@ table {
   background-origin: content-box;
   background-position: 0 12px;
 }
-.about__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.about__wrapper +below (400px) {
-  padding: 0 10px;
-}
 @media only screen and (max-width: 1024px) {
   .about__wrapper {
     background-size: 60%;
@@ -394,12 +388,6 @@ table {
   padding: 0 15px;
   margin: 0 auto;
 }
-.clients__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.clients__wrapper +below (400px) {
-  padding: 0 10px;
-}
 .clients__title {
   color: #fff;
   font-size: 44px;
@@ -522,12 +510,6 @@ table {
   max-width: 780px;
   padding: 0 15px;
   margin: 0 auto;
-}
-.contact__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.contact__wrapper +below (400px) {
-  padding: 0 10px;
 }
 .contact__title {
   color: #222;
@@ -730,12 +712,6 @@ table {
   padding: 0 15px;
   margin: 0 auto;
 }
-.footer__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.footer__wrapper +below (400px) {
-  padding: 0 10px;
-}
 .footer__wrapper:after {
   display: table;
   clear: both;
@@ -907,12 +883,6 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-}
-.header__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.header__wrapper +below (400px) {
-  padding: 0 10px;
 }
 .header__intro-text {
   font-family: 'Open Sans', sans-serif;
@@ -1183,12 +1153,6 @@ table {
   padding: 0 15px;
   margin: 0 auto;
 }
-.nav__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.nav__wrapper +below (400px) {
-  padding: 0 10px;
-}
 .nav__logo {
   float: left;
 }
@@ -1355,12 +1319,6 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-}
-.services__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.services__wrapper +below (400px) {
-  padding: 0 10px;
 }
 @media only screen and (max-width: 1024px) {
   .services__wrapper {
@@ -1623,12 +1581,6 @@ table {
   padding: 0 15px;
   margin: 0 auto;
 }
-.team__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.team__wrapper +below (400px) {
-  padding: 0 10px;
-}
 .team__title {
   font-size: 44px;
   line-height: 1;
@@ -1747,12 +1699,6 @@ table {
   max-width: 975px;
   padding: 0 15px;
   margin: 0 auto;
-}
-.testimonial__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.testimonial__wrapper +below (400px) {
-  padding: 0 10px;
 }
 .testimonial__title {
   color: #fff;
@@ -1904,12 +1850,6 @@ table {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-}
-.work__wrapper +below (500px) {
-  padding: 0 20px;
-}
-.work__wrapper +below (400px) {
-  padding: 0 10px;
 }
 .work__title {
   color: #222;
